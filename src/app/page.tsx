@@ -1,7 +1,13 @@
-// import Slider from "./components/Slider";
+import Reserve from "./components/Reserve";
+import Slider from "./components/Slider";
 
 export default function Home() {
   return (
-    <h1>Hallo</h1>
+    <>
+    <main className="rounded-md">   
+        <Slider />
+        <Reserve />
+    </main>
+    </>
   );
 }

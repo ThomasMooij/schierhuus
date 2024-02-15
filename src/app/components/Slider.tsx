@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import SliderNavigationButton from './buttons/SliderBtn';
 import ImageComponent from './ImageComponent';
@@ -5,8 +7,9 @@ import ReservationBtn from './buttons/ReservationBtn';
 import image1 from '../images/foto1.jpg';
 import image2 from '../images/foto2.jpg';
 import image3 from '../images/foto3.webp';
+import { StaticImageData } from 'next/image';
 
-const images: string[] = [image1, image2, image3];
+const images: StaticImageData[] = [image1, image2, image3];
 
 const Slider: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,7 +18,7 @@ const Slider: React.FC = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 
   return (
-    <div className="relative" style={{ height: '60vh' }}>
+    <section className="relative" style={{ height: '60vh' }}>
       {images.map((image, index) => (
         <ImageComponent key={index} src={image} alt={`Slide ${index}`} isActive={index === currentSlide} />
       ))}
@@ -24,7 +27,7 @@ const Slider: React.FC = () => {
       <SliderNavigationButton direction="right" onClick={nextSlide} />
       
       <ReservationBtn />
-    </div>
+    </section>
   );
 };
 
