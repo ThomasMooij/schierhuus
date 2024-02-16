@@ -18,11 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <NavBar />
       <body className={inter.className}>
-      {children}
-        </body>
+      <main className="bg-amber-200 ">
+      <NavBar />
+          {children}
       <Footer />
+      </main> 
+        </body>  
     </html>
   );
 }
