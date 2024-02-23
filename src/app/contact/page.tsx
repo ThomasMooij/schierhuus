@@ -1,9 +1,8 @@
-"use client"
-
-import Head from 'next/head';
 import React from 'react';
 import { FaTwitter, FaYoutube, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import type { Metadata } from "next";
+   
 
 const socialIcons = [
     { Icon: FaTwitter, href: 'https://twitter.com' },
@@ -26,10 +25,6 @@ export default function Contact() {
 
     return (
         <section className="min-h-screen flex flex-col justify-center items-center bg-amber-200">
-            <Head>
-                <title>Contact Us</title>
-                <meta property="og:title" content="Contact" key="landing" />
-            </Head>
             <div className="text-white">
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}

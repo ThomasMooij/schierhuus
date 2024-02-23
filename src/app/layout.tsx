@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Schierhuys",
   description: "Vakantiehuisje in drente",
 };
-
+ 
 export default function RootLayout({
   children,
 }: Readonly<{

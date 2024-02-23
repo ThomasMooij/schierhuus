@@ -3,18 +3,15 @@ import React from 'react';
 interface NavItems {
     tag: string;
     path: string;
+    url:string;
 }
 
-const NavItem: React.FC<NavItems> = ({ tag, path }) => {
-    const lowerTag = tag.toLowerCase();
-    if(lowerTag === 'home'){
-        const lowerTag = '/';     
-    }
-    console.log(lowerTag)
+const NavItem: React.FC<NavItems> = ({url, tag, path }) => {
+
     return (
-        <div>
-             <a href={`/${lowerTag != 'home' ? lowerTag : ''}`} className={`font-bold px-3 ${path === lowerTag ? 'underline underline-offset-4' : ''}`}>{tag}</a>   
-        </div>
+        <article className='bg-mosgroen rounded-full '>
+            <a href={url} className={`font-bold px-3    ${path === url ? 'underline underline-offset-4' : 'transition duration-300 ease-in-out animate-pulse'}`}>{tag}</a>   
+        </article>
     );
 };
 
