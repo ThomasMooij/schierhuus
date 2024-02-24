@@ -1,5 +1,4 @@
 "use client"
-import Head from 'next/head'
 import { motion } from 'framer-motion';
 import { Suspense } from 'react';
 import Slider from '../components/Slider';
@@ -23,10 +22,6 @@ export default function About() {
 
   return (
     <main className="flex flex-wrap w-full h-screen">
-      <Head>
-        <title>Vakanties in Drenthe!</title>
-        <meta property="og:title" content="about page holiday home" key="about" />
-      </Head>  
       <motion.div
         variants={aboutVariants}
         initial="hidden"
@@ -36,6 +31,7 @@ export default function About() {
       >
         {/* TEXT SECTION */}
        <AboutComponent />
+       
       </motion.div>
       <motion.div
         variants={sliderVariants}
@@ -48,6 +44,7 @@ export default function About() {
         <Suspense fallback={<LoadingSkeleton />}>
           <Slider height='100%'/>
         </Suspense>
+
       </motion.div>
     </main>
   );

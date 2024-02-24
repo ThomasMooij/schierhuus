@@ -17,9 +17,16 @@ interface SliderProps {
 
 const Slider: React.FC<SliderProps>  = ({height}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [openReserves , setOpenReserves] = useState(false)
 
   const nextSlide = () => setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+
+  const openReserveComponent = () => {
+    setOpenReserves(true)
+  }
+
+console.log(openReserves)
 
   return (
     <section className="relative" style={{ height }}>
@@ -30,7 +37,7 @@ const Slider: React.FC<SliderProps>  = ({height}) => {
       <SliderNavigationButton direction="left" onClick={prevSlide} />
       <SliderNavigationButton direction="right" onClick={nextSlide} />
       
-      <ReservationBtn />
+      <ReservationBtn openReserveComponent={openReserveComponent} />
     </section>
   );
 };

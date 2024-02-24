@@ -10,17 +10,14 @@ const ReservationBtn : React.FC<ReservationBtnProps> = ({openReserveComponent}) 
 
   const pathname = usePathname()
 
-console.log(pathname)
-
 const handleClick = () => {
   if (pathname ==='/'){
     const reservePage = document.getElementById('reservation');
     reservePage?.scrollIntoView({ behavior: 'smooth' });
   } else {
-    
+    openReserveComponent()
   }
-}
-
+};
   return (
     <button
       id="ReservationBtn"

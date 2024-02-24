@@ -37,9 +37,7 @@ const Navbar = () => {
   return (
     <nav className={`${colorChange ? 'bg-navAndFooter' : 'bg-transparent' && 'text-black'} fixed pt-1 top-0 w-full z-10 transition-colors duration-300 ease-in-out`}>
         <div className="container mx-auto flex justify-between items-center">
-          <section className="flex flex-col items-center  text-md bg-mosgroen rounded-full p-2 m-2  text-white">
             <NavLogo />
-          </section>
           {
             colorChange ? <article>Het perfecte vakantiehuisje voor uw hele familie!</article> : ""
           }
