@@ -4,6 +4,12 @@ import Head from 'next/head';
 import React from 'react';
 import { FaTwitter, FaYoutube, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Neem contact met ons op!",
+  description: "Contact page",
+};
 
 const socialIcons = [
     { Icon: FaTwitter, href: 'https://twitter.com' },

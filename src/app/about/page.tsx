@@ -6,6 +6,7 @@ import LoadingSkeleton from '../components/LoadingSkeleton';
 import dynamic from 'next/dynamic';
 import AboutComponent from '../components/about/AboutComponent';
 
+
 export default function About() {
 
   const aboutVariants = {

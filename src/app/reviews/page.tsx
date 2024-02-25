@@ -2,8 +2,8 @@ import React from 'react'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Neem contect op!",
-  description: "Contact page",
+  title: "Reviews",
+  description: "Review page",
 };
 
 export default function page() {

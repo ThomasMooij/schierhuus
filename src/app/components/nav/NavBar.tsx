@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
             <NavLogo />
           {
-            colorChange ? <article>Het perfecte vakantiehuisje voor uw hele familie!</article> : ""
+            colorChange ? <article className='text-white'>Het perfecte vakantiehuisje voor uw hele familie!</article> : ""
           }
           <section className='flex flex-row items-center text-white'>
           {
