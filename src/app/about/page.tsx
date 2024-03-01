@@ -5,6 +5,7 @@ import Slider from '../components/Slider';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import dynamic from 'next/dynamic';
 import AboutComponent from '../components/about/AboutComponent';
+import { MotionDiv } from '../components/frames/MotionDiv';
 
 
 export default function About() {
@@ -23,7 +24,7 @@ export default function About() {
 
   return (
     <main className="flex flex-wrap w-full h-screen">
-      <motion.div
+      <MotionDiv
         variants={aboutVariants}
         initial="hidden"
         animate="visible"
@@ -33,8 +34,8 @@ export default function About() {
         {/* TEXT SECTION */}
        <AboutComponent />
        
-      </motion.div>
-      <motion.div
+      </MotionDiv>
+      <MotionDiv
         variants={sliderVariants}
         initial="hidden"
         animate="visible"
@@ -46,7 +47,7 @@ export default function About() {
           <Slider height='100%'/>
         </Suspense>
 
-      </motion.div>
+      </MotionDiv>
     </main>
   );
 }

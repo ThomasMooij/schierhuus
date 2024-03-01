@@ -1,30 +1,20 @@
-"use client"
-
 import Head from 'next/head';
 import React from 'react';
-import { FaTwitter, FaYoutube, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 import type { Metadata } from "next";
+import {MotionHeader1} from '../components/frames/MotionHeader1';
+import { MotionParagraph } from '../components/frames/MotionParagraph';
+import { MotionDiv } from '../components/frames/MotionDiv';
+import { ContactInfo, SocialIcons } from '../components/Icons';
+
 
 export const metadata: Metadata = {
   title: "Neem contact met ons op!",
   description: "Contact page",
 };
 
-const socialIcons = [
-    { Icon: FaTwitter, href: 'https://twitter.com' },
-    { Icon: FaYoutube, href: 'https://youtube.com' },
-    { Icon: FaInstagram, href: 'https://instagram.com' },
-];
-
-const contactInfo = [
-    { Icon: FaEnvelope, text: 'email@example.com' },
-    { Icon: FaPhone, text: '+1234567890' },
-    { Icon: FaMapMarkerAlt, text: '1234 Street, City, Country' },
-];
 
 export default function Contact() {
-    const icons = socialIcons.map(({ Icon, href }, index) => (
+    const icons = SocialIcons.map(({ Icon, href }, index) => (
         <a key={index} href={href} className="text-gray-500 hover:text-gray-700 transition-colors duration-300">
             <Icon size="24px" className="m-1" />
         </a>
@@ -37,27 +27,27 @@ export default function Contact() {
                 <meta property="og:title" content="Contact" key="landing" />
             </Head>
             <div className="text-white">
-                <motion.h1
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-blue-500 text-3xl font-bold"
-                >
-                    Contact us
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mt-4 mb-8 text-black"
-                >
-                    Leave your email and we will get back to you within 24 hours
-                </motion.p>
+  
+                <MotionHeader1 
+                    initial ={{opacity: 0, y: -50 }}
+                    animate= {{opacity: 1, y: 0 }}
+                    transition= {{duration: 0.5 }}
+                    className= "text-blue-500 text-3xl font-bold"
+                    title ="Contact us"
+                />
+                    
+                <MotionParagraph 
+                   initial ={{opacity: 0, y: -50 }}
+                   animate= {{opacity: 1, y: 0 }}
+                   transition= {{duration: 0.5 }}
+                   className= "text-blue-500 text-3xl font-bold"
+                   title ="Contact us"
+                /> 
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div className="flex flex-col items-center md:items-start">
-                        {contactInfo.map(({ Icon, text }, index) => (
-                            <motion.div
+                        {ContactInfo.map(({ Icon, text }, index) => (
+                            <MotionDiv
                                 key={index}
                                 initial={{ opacity: 0, y: -50 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -66,18 +56,18 @@ export default function Contact() {
                             >
                                 <Icon className="mr-2" />
                                 <span>{text}</span>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: contactInfo.length * 0.1 + 0.4 }}
+                            transition={{ duration: 0.5, delay: ContactInfo.length * 0.1 + 0.4 }}
                             className="mt-8 flex justify-center md:justify-start"
                         >
                             {icons}
-                        </motion.div>
+                        </MotionDiv>
                     </div>
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
@@ -121,7 +111,7 @@ export default function Contact() {
                                 Send message
                             </button>
                         </form>
-                    </motion.div>
+                    </MotionDiv>
                 </div>
             </div>
         </section>
