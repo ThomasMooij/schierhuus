@@ -1,3 +1,4 @@
+"use client"
 import { MotionInterface } from './MotionInterface'
 import { motion } from 'framer-motion'
 

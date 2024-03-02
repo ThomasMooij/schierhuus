@@ -41,7 +41,6 @@ export default function Contact() {
                    animate= {{opacity: 1, y: 0 }}
                    transition= {{duration: 0.5 }}
                    className= "text-blue-500 text-3xl font-bold"
-                   title ="Contact us"
                 /> 
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

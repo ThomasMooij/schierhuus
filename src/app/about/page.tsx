@@ -1,5 +1,3 @@
-"use client"
-import { motion } from 'framer-motion';
 import { Suspense } from 'react';
 import Slider from '../components/Slider';
 import LoadingSkeleton from '../components/LoadingSkeleton';
