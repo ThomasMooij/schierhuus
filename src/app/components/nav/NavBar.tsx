@@ -36,32 +36,29 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`${colorChange ? "bg-navAndFooter h-20 text-black" : "bg-transparent text-black"} fixed pt-1 top-0 w-full z-10 transition-colors duration-300 ease-in-out`}>
-      <div className="container mx-auto flex justify-between items-center">
-        <section>
-          <NavLogo />
-        </section>
-        {colorChange && (
-          <article className="hidden lg:block text-white">
+    <nav className={`${colorChange ? "bg-navAndFooter text-black" : "bg-transparent text-black"} fixed pt-1 top-0 w-full z-10 transition-colors duration-300 ease-in-out`}>
+      <div className="container mx-auto flex items-center" style={{ justifyContent: 'space-between' }}>
+      {/* Logo Section */}
+          <div className="flex-none mb-3">
+            <NavLogo />
+          </div>
+            <div className="flex-grow text-center hidden lg:block text-white">
             Het perfecte vakantiehuisje voor uw hele familie!
-          </article>
-        )}
-
-        <section className="flex flex-row pt-10 pr-10 justify-between text-white">
+          </div>
+     {/* Items  Section */}
+        <div className="flex-none flex items-center">
           {openHam && (
-            <div className="flex flex-col">
+            <div className="flex flex-col absolute top-full mt-2 right-0 shadow-md py-2">
               {NavItems.map(({ tag, url }) => (
                 <NavItem key={url} url={url} tag={tag} path={pathname} />
               ))}
             </div>
           )}
-          <div
-            className="cursor-pointer"
-            onClick={() => setOpenHam(!openHam)}
-          >
-            {openHam ? <FaTimes className="bg-black text-2xl" /> : <FaBars className="bg-black  text-2xl" />}
+      {/* Icon  Section */}
+          <div onClick={() => setOpenHam(!openHam)} className="cursor-pointer ml-auto">
+            {openHam ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
           </div>
-        </section>
+        </div>
       </div>
     </nav>
   );

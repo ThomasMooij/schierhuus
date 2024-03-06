@@ -11,8 +11,8 @@ export const MotionDiv : React.FC<MotionInterface> = ({initial, animate, transit
         transition={ transition}
         className={className}
         variants={variants}
->
-{children}
-</motion.div>
+          >
+          {children}
+    </motion.div>
   )
 }
