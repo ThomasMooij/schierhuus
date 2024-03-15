@@ -43,7 +43,7 @@ const Navbar = () => {
             <NavLogo />
           </div>
             <div className="flex-grow text-center hidden lg:block text-white">
-            Het perfecte vakantiehuisje voor uw hele familie!
+           { colorChange && <p>Het perfecte vakantiehuisje voor uw hele familie!</p>}
           </div>
      {/* Items  Section */}
         <div className="flex-none flex items-center">
