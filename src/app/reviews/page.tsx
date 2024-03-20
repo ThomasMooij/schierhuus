@@ -1,6 +1,5 @@
 import { ReviewsComponent } from '../components/reviews/ReviewsComponent';
 
-// FALTA METADATA??
 const ReviewsPage = () => {
 
   return (

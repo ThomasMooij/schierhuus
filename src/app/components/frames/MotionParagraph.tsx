@@ -11,7 +11,7 @@ export const MotionParagraph: React.FC<MotionInterface> = ({initial, animate, tr
         transition={ transition}
         className={className}
     >
-    {title}
+    {title} 
     </motion.p>
   )
 }

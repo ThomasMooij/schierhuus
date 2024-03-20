@@ -8,9 +8,8 @@ export default function Home() {
   return (
     <>
     <main className=""> 
-      <Suspense fallback={<LoadingSkeleton />}>
+    
         <Slider height="60vh"/>
-      </Suspense>
 
       <Suspense fallback={<LoadingSkeleton />}>
         <Reserve />

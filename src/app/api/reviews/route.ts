@@ -21,8 +21,6 @@ export async function GET(req: NextRequest) {
   const apiKey = process.env.API_ID;
   const placeId = process.env.PLACE_ID; 
 
-  console.log("keys:" , placeId, apiKey)
-
   try {
     
     const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&fields=reviews&key=${apiKey}`, {

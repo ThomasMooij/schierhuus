@@ -17,7 +17,8 @@ export const ReviewsComponent = () => {
     useEffect(() => {
         const fetchReviews = async () => {
           try {
-            const response = await fetch('./api/reviews', { method: 'GET' });
+            console.log("HIHA")
+            const response = await fetch('/api/reviews', { method: 'GET' });
             console.log("response:", response)
             if (!response.ok) throw new Error('Failed to fetch');
             const data = await response.json();

@@ -6,6 +6,8 @@ export interface MotionInterface {
     transition: Object;
     className: string;
     title?: string;
-    variants?: Variants; // Ensure it accepts Variants type
+    variants?: Variants;
     children?: React.ReactNode;
+    onClick?: (event: React.MouseEvent<HTMLDivElement>) => void; 
+
 }

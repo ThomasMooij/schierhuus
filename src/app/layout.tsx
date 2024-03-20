@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <main className="bg-amber-200 ">
-      <NavBar />
-          {children}
-      <Footer />
-      </main> 
+        <main className="">
+        <NavBar />
+            {children}
+        <Footer />
+        </main> 
         </body>  
     </html>
   );
