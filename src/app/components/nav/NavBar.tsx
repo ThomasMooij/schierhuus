@@ -36,7 +36,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`${colorChange ? "bg-navAndFooter text-black" : "bg-transparent text-black"} fixed pt-1 top-0 w-full z-10 transition-colors duration-300 ease-in-out`}>
+    <nav className={`${colorChange ? "bg-navAndFooter text-black" : " text-black"} fixed pt-1 top-0 w-full z-10 transition-colors duration-300 ease-in-out`}>
       <div className="container mx-auto flex items-center justify-center" style={{ justifyContent: 'space-between' }}>
       {/* Logo Section */}
           <div className="flex-none mb-3">
@@ -54,9 +54,9 @@ const Navbar = () => {
               ))}
             </div>
           )}
-      {/* Icon  Section */}
-          <div onClick={() => setOpenHam(!openHam)} className="cursor-pointer ml-auto">
-            {openHam ? <FaTimes className="text-3xl" /> : <FaBars className="text-2xl " />}
+      {/* MENU  Section */}
+          <div onClick={() => setOpenHam(!openHam)} className="cursor-pointer ml-auto ">
+            {openHam ? <FaTimes className=" bg-menu text-3xl" /> : <FaBars className=" bg-menu text-2xl " />}
           </div>
         </div>
       </div>

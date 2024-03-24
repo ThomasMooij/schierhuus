@@ -1,42 +1,58 @@
+"use client"
 import React from 'react';
-import { MotionDiv} from '../frames/MotionDiv'; 
+import Slider from '../Slider';
+import { MotionDiv } from '../frames/MotionDiv';
 import { MotionParagraph } from '../frames/MotionParagraph';
-import { facilities } from '@/app/utils/Facilities';
-import { FaChevronDown } from 'react-icons/fa';
+import FacilityImages from '@/app/images/FacilityImages';
+import MainImages from '@/app/images/MainImages';
 
-interface Props {
-  facility: typeof facilities;
-  expanded: boolean;
-  toggleExpanded: () => void;
+interface Facility {
+    id: string;
+    title: string;
+    description: string;
 }
 
-const FacilityCard: React.FC<Props> = ({ facility, expanded, toggleExpanded }) => (
-  <MotionDiv
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.5 }}
-    className="w-4/5 max-w-4xl bg-white rounded-lg shadow-lg cursor-pointer mb-5 hover:shadow-2xl transition"
-    onClick={toggleExpanded}
-  >
-    <div className="p-6 flex flex-col items-center">
-      <h2 className="text-xl font-semibold mb-2">{facility.title}</h2>
-      <div
-        className={`transform transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
-      >
-      <FaChevronDown />
-        <span>▼</span>
-      </div>
-      {expanded && (
-        <MotionParagraph
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-md mt-2"
-          title={facility.description}
-        />
-      )}
-    </div>
-  </MotionDiv>
-);
+interface FacilityCardProps {
+    facility: Facility;
+    expanded: boolean;
+    onToggleExpand: (id: string) => void;
+}
+
+const FacilityCard: React.FC<FacilityCardProps> = ({ facility, expanded, onToggleExpand }) => {
+    const handleExpandClick = () => {
+        onToggleExpand(facility.id);
+
+    };
+
+    if (expanded) {
+        return (
+            <div className="fixed inset-0 bg-white z-50 flex flex-row items-center justify-center p-4">
+                <div className="w-1/2">
+                    <MotionParagraph
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="text-lg"
+                        title={facility.description}
+                    />
+                </div>
+                <div className="w-1/2">
+                    <Slider images={MainImages} />
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <MotionDiv
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="aspect-square w-full md:w-64 bg-white rounded-lg shadow-lg cursor-pointer mb-5 hover:shadow-xl transition-all flex items-center justify-center"
+            onClick={handleExpandClick}
+        >
+            <h2 className="text-xl font-semibold">{facility.title}</h2>
+        </MotionDiv>
+    );
+};
 
 export default FacilityCard;

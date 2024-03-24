@@ -24,7 +24,7 @@ const config: Config = {
         'navText' : '#6c8f74',
         'nature-light': '#76b852',
         'nature-dark': '#8DC26F',
-   
+        'menu': '#d2f7dc'
       }
     },
   },
