@@ -1,4 +1,4 @@
-import { FaTwitter, FaYoutube, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaTwitter, FaYoutube, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt,FaChevronDown  } from 'react-icons/fa';
 
 export const SocialIcons = [
     { Icon: FaTwitter, href: 'https://twitter.com' },
@@ -11,3 +11,7 @@ export const ContactInfo = [
     { Icon: FaPhone, text: '+1234567890' },
     { Icon: FaMapMarkerAlt, text: '1234 Street, City, Country' },
 ];
+
+export{
+    FaChevronDown
+}

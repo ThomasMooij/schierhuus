@@ -29,7 +29,7 @@ const Navbar = () => {
   const NavItems = [
     { tag: "Home", url: "/" },
     { tag: "Reviews", url: "/reviews" },
-    { tag: "Over het huisje", url: "/about" },
+    { tag: "Over ons", url: "/about" },
     { tag: "De omgeving", url: "/area" },
     { tag: "Praktische info", url: "/info" },
     { tag: "Contact", url: "/contact" },
@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav className={`${colorChange ? "bg-navAndFooter text-black" : "bg-transparent text-black"} fixed pt-1 top-0 w-full z-10 transition-colors duration-300 ease-in-out`}>
-      <div className="container mx-auto flex items-center" style={{ justifyContent: 'space-between' }}>
+      <div className="container mx-auto flex items-center justify-center" style={{ justifyContent: 'space-between' }}>
       {/* Logo Section */}
           <div className="flex-none mb-3">
             <NavLogo />
@@ -56,7 +56,7 @@ const Navbar = () => {
           )}
       {/* Icon  Section */}
           <div onClick={() => setOpenHam(!openHam)} className="cursor-pointer ml-auto">
-            {openHam ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+            {openHam ? <FaTimes className="text-3xl" /> : <FaBars className="text-2xl " />}
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import {MotionHeader1} from '../components/frames/MotionHeader1';
 import { MotionParagraph } from '../components/frames/MotionParagraph';
 import { MotionDiv } from '../components/frames/MotionDiv';
-import { ContactInfo, SocialIcons } from '../components/Icons';
+import { ContactInfo, SocialIcons } from '../utils/Icons';
 import { ContactForm } from '../components/contact/ContactForm';
 
 
@@ -22,7 +22,7 @@ export default function Contact() {
     ));
 
     return (
-        <section className="min-h-screen flex flex-col justify-center items-center bg-amber-200">
+        <section className="min-h-screen flex flex-col justify-center items-center bg-paginaAchtergrond">
             <Head>
                 <title>Contact Us</title>
                 <meta property="og:title" content="Contact" key="landing" />

@@ -7,7 +7,7 @@ import { Suspense } from 'react'
 export default function Home() {
   return (
     <>
-    <main className=""> 
+    <main className="#"> 
     
         <Slider height="60vh"/>
 

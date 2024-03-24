@@ -4,7 +4,7 @@ import Socials from './buttons/Socials';
 
 export default function Reserve() {
   return (
-  <section id='reservation' className='bg-amber-200 '>
+  <section id='reservation' className='bg-paginaAchtergrond '>
       <div className="flex  justify-center items-start " style={{ height: '90vh' }}>
           <div className="flex space-x-10  mt-20 underline-offset-2 "> 
             <Socials 

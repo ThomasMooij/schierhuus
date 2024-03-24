@@ -27,7 +27,7 @@ export default function About() {
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.8 }}
-        className="w-full md:w-1/2 flex items-center justify-center p-10 bg-gradient-to-r from-cyan-500"
+        className="w-full md:w-1/2 flex items-center justify-center p-10"
       >
         {/* TEXT SECTION */}
        <AboutComponent />
