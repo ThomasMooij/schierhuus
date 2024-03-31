@@ -1,15 +1,15 @@
 import { Suspense } from 'react';
-import Slider from '../components/Slider';
-import LoadingSkeleton from '../components/LoadingSkeleton';
+import Slider from '@/components/Slider';
+import LoadingSkeleton from '@/components/LoadingSkeleton';
 import dynamic from 'next/dynamic';
-import AboutComponent from '../components/about/AboutComponent';
-import { MotionDiv } from '../components/frames/MotionDiv';
-import { aboutVariants, sliderVariants } from '../utils/Variants';
-import MainImages from '../images/MainImages';
+import AboutComponent from '@/components/about/AboutComponent';
+import { MotionDiv } from '@/components/frames/MotionDiv';
+import { aboutVariants, sliderVariants } from '@/utils/Variants';
+import MainImages from '@/images/MainImages';
 
 export default function About() {
 
-  const ReserveComponent = dynamic(() => import('../components/Reserve'));
+  const ReserveComponent = dynamic(() => import('@/components/Reserve'));
 
   return (
     <main className="flex flex-wrap w-full h-screen">

@@ -3,7 +3,7 @@ import Reserve from "./components/Reserve";
 import Slider from "./components/Slider";
 import { Suspense } from 'react'
 import { MotionDiv } from "./components/frames/MotionDiv";
-import { aboutVariants, sliderVariants } from "./utils/Variants";
+import { aboutVariants, sliderVariants } from "../utils/Variants";
 import MainImages from "./images/MainImages";
 
 

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import FacilityCard from '../components/facilities/FacilityCard';
-import { facilities } from '../utils/Facilities';
+import FacilityCard from '@/components/facilities/FacilityCard';
+import { facilities } from '@/utils/Facilities';
 
 const FacilitiesPage = () => {
   const [expandedFacilityId, setExpandedFacilityId] = useState<string | null>(null);
@@ -13,7 +13,7 @@ const FacilitiesPage = () => {
       setExpandedFacilityId(id); 
     }
   };
-
+ 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen p-5">
    
