@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import React from 'react';
 import type { Metadata } from "next";
-import {MotionHeader1} from '../components/frames/MotionHeader1';
-import { MotionParagraph } from '../components/frames/MotionParagraph';
-import { MotionDiv } from '../components/frames/MotionDiv';
-import { ContactInfo, SocialIcons } from '../../utils/Icons';
-import { ContactForm } from '../components/contact/ContactForm';
+import {MotionHeader1} from '@/components/frames/MotionHeader1';
+import { MotionParagraph } from '@/components/frames/MotionParagraph';
+import { MotionDiv } from '@/components/frames/MotionDiv';
+import { ContactInfo, SocialIcons } from '@/utils/Icons';
+import { ContactForm } from '@/components/contact/ContactForm';
 
 
 export const metadata: Metadata = {

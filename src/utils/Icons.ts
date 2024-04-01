@@ -15,3 +15,4 @@ export const ContactInfo = [
 export{
     FaChevronDown
 }
+
