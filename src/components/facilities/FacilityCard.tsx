@@ -40,11 +40,15 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
     const expanded = facility.id === expandedFacilityId;
     const alignment = index % 2 === 0 ? 'mr-10' : 'ml-10';
 
-    const handleExpandClick = () => {
+    const handleExpandClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        event.preventDefault();
+        event.stopPropagation();
         setExpandedFacilityId(expanded ? null : facility.id);
     };
+    
 
     const handleCloseClick = (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
+        event.preventDefault();
         event.stopPropagation(); 
         setExpandedFacilityId(null);
     };

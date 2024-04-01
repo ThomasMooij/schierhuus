@@ -1,21 +1,17 @@
-import React from "react";
+import React from 'react';
+import dynamic from 'next/dynamic';
 import { FacilitiesProvider } from "@/context/FacilityContext";
-import FacilityCard from "@/components/facilities/FacilityCard";
 import { facilities } from "@/utils/Facilities";
+import { MotionHeader1 } from '@/components/frames/MotionHeader1';
+
+const FacilitiesCarousel = dynamic(() => import('@/components/facilities/FacilityCarousel'), { ssr: false });
 
 const FacilitiesPage = () => {
   return (
     <FacilitiesProvider>
       <section className="flex flex-col items-center justify-center min-h-screen p-5">
-          <div className="w-full flex flex-col items-center gap-4">
-            {facilities.map((facility, index) => (
-              <FacilityCard
-                key={facility.id}
-                facility={facility}
-                index={index}
-              />
-            ))}
-          </div>
+        <MotionHeader1 > Onze faciliteiten</MotionHeader1>
+        <FacilitiesCarousel facilities={facilities} />
       </section>
     </FacilitiesProvider>
   );
