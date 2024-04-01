@@ -67,8 +67,8 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
         <MotionDiv
         initial="hidden"
         animate="visible"
-        transition={{ duration: 0.5, delay: index * 0.1 }} // Adjust for desired effect
-        className={`cursor-pointer flex w-full md:w-4/5 lg:max-w-4xl h-44 my-2 bg-white rounded-lg shadow-lg overflow-hidden ${alignment}`} // Include alignmentClass here
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className={`cursor-pointer flex w-full md:w-4/5 lg:max-w-4xl h-44 my-2 bg-white rounded-lg shadow-lg overflow-hidden ${alignment}`} 
         variants={FacilityCardVariants}
         onClick={handleExpandClick}
     >
