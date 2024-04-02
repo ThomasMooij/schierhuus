@@ -1,21 +1,20 @@
 'use client'
 import React, { createContext, useContext, ReactNode, useState } from 'react';
 
-interface FacilitiesContextType {
+interface FacilitiesContextProps {
   expandedFacilityId: string | null;
   setExpandedFacilityId: (id: string | null) => void;
-  handleCloseClick: () => void;
+  handleCloseClick: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
 }
 
 interface FacilitiesProviderProps {
     children: ReactNode;
 }
   
-
-const FacilitiesContext = createContext<FacilitiesContextType>({
+const FacilitiesContext = createContext<FacilitiesContextProps>({
   expandedFacilityId: null,
   setExpandedFacilityId: () => {},
-  handleCloseClick: () => void
+  handleCloseClick: () => {}
 });
 
 export const useFacilities = () => useContext(FacilitiesContext);

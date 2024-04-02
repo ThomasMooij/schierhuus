@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import NavLogo from "./NavLogo";
 import NavItem from "./NavItem";
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [colorChange, setColorChange] = useState(false);
@@ -36,16 +36,25 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`${colorChange ? "bg-navAndFooter text-black" : " text-black"} fixed pt-1 top-0 w-full z-10 transition-colors duration-300 ease-in-out`}>
-      <div className="container mx-auto flex items-center justify-center" style={{ justifyContent: 'space-between' }}>
-      {/* Logo Section */}
-          <div className="flex-none mb-3">
-            <NavLogo />
-          </div>
-            <div className="flex-grow text-center hidden lg:block text-white">
-           { colorChange && <p>Het perfecte vakantiehuisje voor uw hele familie!</p>}
-          </div>
-     {/* Items  Section */}
+    <nav
+      className={`${
+        colorChange ? "bg-navAndFooter text-black" : " text-black"
+      } fixed pt-1 top-0 w-full z-10 transition-colors duration-300 ease-in-out`}
+    >
+      <div
+        className="container mx-auto flex items-center justify-center"
+        style={{ justifyContent: "space-between" }}
+      >
+        {/* Logo Section */}
+        <div className="flex-none mb-3">
+          <NavLogo />
+        </div>
+        <div className="flex-grow text-center hidden lg:block text-white">
+          {colorChange && (
+            <p>Het perfecte vakantiehuisje voor uw hele familie!</p>
+          )}
+        </div>
+        {/* Items  Section */}
         <div className="flex-none flex items-center">
           {openHam && (
             <div className="flex flex-col absolute top-full mt-2 right-0 shadow-md py-2">
@@ -54,9 +63,20 @@ const Navbar = () => {
               ))}
             </div>
           )}
-      {/* MENU  Section */}
-          <div onClick={() => setOpenHam(!openHam)} className="cursor-pointer ml-auto ">
-            {openHam ? <FaTimes className=" bg-menu text-3xl" /> : <FaBars className=" bg-menu text-2xl " />}
+          {/* MENU  Section */}
+          <div
+            onClick={() => setOpenHam(!openHam)}
+            className="cursor-pointer ml-auto opacity-75 m-12"
+          >
+            {openHam ? (
+              <button className="bg-menu p-2 shadow-lg">
+                <FaTimes className="   shadow-cyan-500/50 opacity-75 text-3xl" />{" "}
+              </button>
+            ) : (
+              <button className="bg-menu p-2 shadow-lg">
+                <FaBars className="  text-2xl " />
+              </button>
+            )}
           </div>
         </div>
       </div>
