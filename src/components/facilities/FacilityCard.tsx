@@ -46,7 +46,6 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
         setExpandedFacilityId(expanded ? null : facility.id);
     };
     
-
     const handleCloseClick = (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
         event.preventDefault();
         event.stopPropagation(); 

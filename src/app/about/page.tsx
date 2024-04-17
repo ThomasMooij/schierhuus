@@ -28,7 +28,7 @@ export default function About() {
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full md:w-1/2 h-screen overflow-hidden"
+        className="w-full md:w-1/2 h-full"
       >
         {/* IMAGE SLIDER */}
         <Suspense fallback={<LoadingSkeleton />}>
