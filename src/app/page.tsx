@@ -18,7 +18,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
 
       >
-        <Slider images={MainImages} height="60vh"/>
+        <Slider images={MainImages} height="100vh"/>
     </MotionDiv>
 
 

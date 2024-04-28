@@ -4,7 +4,7 @@ import Socials from './buttons/Socials';
 
 const Footer = () => {
   return (
-    <footer className="bg-navAndFooter text-white mt-10 p-10 text-center">
+    <footer className="bg-navAndFooter text-white mt-10 p-10 text-center h-[35vh]">
       <div className="mb-4">
         <h5 className="text-xl font-bold mb-2">Follow Us</h5>
         <div className="flex justify-center space-x-4">

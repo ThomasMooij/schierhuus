@@ -38,7 +38,6 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
 
     const { expandedFacilityId, setExpandedFacilityId } = useFacilities();
     const expanded = facility.id === expandedFacilityId;
-    const alignment = index % 2 === 0 ? 'mr-10' : 'ml-10';
 
     const handleExpandClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         event.preventDefault();
@@ -63,11 +62,12 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
             </div>
         </div>
     ) : (
+
         <MotionDiv
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        className={`cursor-pointer flex w-full md:w-4/5 lg:max-w-4xl h-44 my-2 bg-white rounded-lg shadow-lg overflow-hidden ${alignment}`} 
+        className={`cursor-pointer flex w-full md:w-4/5 lg:max-w-4xl h-44 my-2 bg-white rounded-lg shadow-lg overflow-hidden`} 
         variants={FacilityCardVariants}
         onClick={handleExpandClick}
     >
@@ -79,6 +79,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
             <p className="text-sm">{slice(facility.description, 100)}</p> {/* Truncate after 100 characters */}
         </div>
     </MotionDiv>
+    
     );
 };
 

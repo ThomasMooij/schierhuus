@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "paginaAchtergrond": "linear-gradient(to right, #85de9d, #59ab3c)",
+        "paginaAchtergrond": "linear-gradient(to right, #3c3c1f, #cdc38c)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -22,7 +22,7 @@ const config: Config = {
       },
       colors : {
         'mosgroen' : 'rgba(47, 69, 56, 0.25)',
-        'navAndFooter' : '#a1d4af',
+        'navAndFooter' : '#5a5a4d',
         'navText' : '#6c8f74',
         'nature-light': '#59ab3c',
         'nature-dark': '#8DC26F',

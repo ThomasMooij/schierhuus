@@ -12,7 +12,7 @@ export default function About() {
   const ReserveComponent = dynamic(() => import('@/components/Reserve'));
 
   return (
-    <main className="flex flex-wrap w-full h-screen">
+    <section className="flex flex-wrap w-full h-[70vh]">
       <MotionDiv
         variants={aboutVariants}
         initial="hidden"
@@ -35,6 +35,6 @@ export default function About() {
           <Slider images={MainImages} height='100%'/>
         </Suspense>
       </MotionDiv>
-    </main>
+    </section>
   );
 }
