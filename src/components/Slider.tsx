@@ -21,6 +21,7 @@ const Slider: React.FC<SliderProps> = ({ images, height }) => {
     setOpenReserves(true);
   };
 
+
   return (
     <section className="relative" style={{ height }}>
       {images.map((image, index) => (

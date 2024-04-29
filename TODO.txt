@@ -1,12 +1,9 @@
-## Solve long blocking time (current lighthouse score 89): 
-    https://byteminds.co.uk/blog/how-we-improved-page-load-speed-for-nextjs-ecommerce-website#:~:text=To%20reduce%20the%20Total%20Blocking,Google%20Analytics%20using%20next%2Fscript.
-    https://stackoverflow.com/questions/72774022/nextjs-improve-total-blocking-time-on-google-pagespeed
-
 ## Integrate google reviews. 
 
 ## improve SEO:
     https://nextjs.org/learn-pages-router/seo/introduction-to-seo
 
-## Images through aws
+## Images through aws/public folder?
 
 
+## fade transition between images and other components. 
