@@ -6,23 +6,7 @@ import NavItem from "./NavItem";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [colorChange, setColorChange] = useState(false);
   const [openHam, setOpenHam] = useState(false);
-
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorChange(true);
-    } else {
-      setColorChange(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNavbarColor);
-    return () => {
-      window.removeEventListener("scroll", changeNavbarColor);
-    };
-  }, []);
 
   const pathname = usePathname();
 
@@ -37,19 +21,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-      "text-black"
-      } fixed top-0 w-full z-10 transition-colors duration-300 ease-in-out `}
+      className=
+      "text-black fixed top-0 w-full z-10 transition-colors duration-300 ease-in-out "
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo Section */}
         <div className="mb-3">
           <NavLogo />
-        </div>
-        <div className="hidden lg:block text-white">
-          {colorChange && (
-            <p>Het perfecte vakantiehuisje voor uw hele familie!</p>
-          )}
         </div>
         {/* Items Section - shown only on large screens */}
         <div className="hidden lg:flex items-center space-x-8 mt-2">

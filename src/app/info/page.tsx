@@ -21,7 +21,7 @@ const FacilitiesPage = () => {
           <FacilityText />
         </MotionDiv>
 
-        <MotionDiv variants={containerVariants} initial="hidden" animate="visible" className="w-full md:w-1/2 mt-20">
+        <MotionDiv variants={containerVariants} initial="hidden" animate="visible" className="w-full md:w-1/2">
           <FacilitiesCarousel facilities={facilities} />
         </MotionDiv>
       </main>

@@ -7,7 +7,7 @@ import Slider from '../Slider';
 import MainImages from '@/images/MainImages';
 import { FacilityCardVariants } from '@/utils/Variants';
 import { slice } from '@/utils/Functions';
-import { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import ImageComponent from '../ImageComponent';
 
 interface Facility {
@@ -64,22 +64,23 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
     ) : (
 
         <MotionDiv
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        className={`cursor-pointer flex w-full md:w-4/5 lg:max-w-4xl h-44 my-2 bg-white rounded-lg shadow-lg overflow-hidden`} 
-        variants={FacilityCardVariants}
-        onClick={handleExpandClick}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className={`cursor-pointer flex w-full md:w-4/5 lg:max-w-4xl h-44 my-2 bg-white rounded-lg shadow-lg overflow-hidden`} 
+            variants={FacilityCardVariants}
+            onClick={handleExpandClick}
     >
-        <div className="w-1/2 h-full">
-            <ImageComponent key={index}  src={facility.images[0].src} alt="" className="w-full h-full object-cover" />
+        <div className="relative w-1/2 h-full">
+            
+            <Image src={facility.images[0].src} alt="" layout='fill' objectFit="cover"  />
         </div>
         <div className="w-1/2 h-full flex flex-col p-4 justify-between">
             <h2 className="text-xl font-semibold">{facility.title}</h2>
             <p className="text-sm">{slice(facility.description, 100)}</p> {/* Truncate after 100 characters */}
         </div>
     </MotionDiv>
-    
+
     );
 };
 
