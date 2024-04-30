@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SliderNavigationButton from './buttons/SliderBtn';
 import ImageComponent from './ImageComponent'; 
 import ReservationBtn from './buttons/ReservationBtn';
@@ -21,6 +21,11 @@ const Slider: React.FC<SliderProps> = ({ images, height }) => {
     setOpenReserves(true);
   };
 
+  useEffect(() => {
+    const slideInterval = setInterval(nextSlide, 1500); 
+
+    return () => clearInterval(slideInterval);
+  }, [images]);
 
   return (
     <section className="relative" style={{ height }}>

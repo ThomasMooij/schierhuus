@@ -26,7 +26,8 @@ const config: Config = {
         'navText' : '#6c8f74',
         'nature-light': '#59ab3c',
         'nature-dark': '#8DC26F',
-        'menu': '#d2f7dc'
+        'menu': '#d2f7dc',
+        'Terracota' : '#E2725B'
       }
     },
   },

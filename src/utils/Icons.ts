@@ -6,7 +6,7 @@ export const SocialIcons = [
     { Icon: FaInstagram, href: 'https://instagram.com' },
 ];
 
-export const ContactInfo = [
+export const ContactIcons= [
     { Icon: FaEnvelope, text: 'email@example.com' },
     { Icon: FaPhone, text: '+1234567890' },
     { Icon: FaMapMarkerAlt, text: '1234 Street, City, Country' },
