@@ -22,7 +22,7 @@ const Slider: React.FC<SliderProps> = ({ images, height }) => {
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 1500); 
+    const slideInterval = setInterval(nextSlide, 2500); 
 
     return () => clearInterval(slideInterval);
   }, [images]);

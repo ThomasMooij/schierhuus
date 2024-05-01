@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import { useFacilities } from '@/context/FacilityContext';
 import { MotionDiv } from '../frames/MotionDiv';
 import { MotionParagraph } from '../frames/MotionParagraph';
@@ -33,35 +33,21 @@ const CloseIcon: React.FC<CloseIconProps> = ({ onClick }) => (
 );
 
 const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
-
-    console.log(facility.images[0].src);
-
-    const { expandedFacilityId, setExpandedFacilityId } = useFacilities();
-    const expanded = facility.id === expandedFacilityId;
+    const { selectedFacility, setSelectedFacility } = useFacilities();
 
     const handleExpandClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        event.preventDefault();
         event.stopPropagation();
-        setExpandedFacilityId(expanded ? null : facility.id);
-    };
+        setSelectedFacility(facility); 
+      };
+      
     
-    const handleCloseClick = (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
-        event.preventDefault();
-        event.stopPropagation(); 
-        setExpandedFacilityId(null);
-    };
+    // const handleCloseClick = (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
+    //     event.preventDefault();
+    //     event.stopPropagation(); 
+    //     selectedFacility(null);
+    // };
 
-    return expanded ? (
-        <div className="fixed inset-0 bg-white z-50 flex flex-row items-center justify-center p-4">
-            <div className="w-1/2">
-                <MotionParagraph initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-lg" title={facility.description} />
-            </div>
-            <div className="w-1/2 relative">
-                <CloseIcon onClick={handleCloseClick} />
-                <Slider images={MainImages} />
-            </div>
-        </div>
-    ) : (
+    return (
 
         <MotionDiv
             initial="hidden"
@@ -75,9 +61,9 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
             
             <Image src={facility.images[0].src} alt="" layout='fill' objectFit="cover"  />
         </div>
-        <div className="w-1/2 h-full flex flex-col p-4 justify-between">
+        <div className="w-1/2 h-full flex flex-col p-4 justify-center">
             <h2 className="text-xl font-semibold">{facility.title}</h2>
-            <p className="text-sm">{slice(facility.description, 100)}</p> {/* Truncate after 100 characters */}
+            <p className="text-sm">Klik voor meer info!</p> {/* Truncate after 100 characters */}
         </div>
     </MotionDiv>
 

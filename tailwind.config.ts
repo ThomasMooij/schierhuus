@@ -12,6 +12,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "paginaAchtergrond": "linear-gradient(to right, #3c3c1f, #cdc38c)",
+        "cardAchtergrond":"linear-gradient(to right, #cdc38c, #3c3c1f)" ,
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

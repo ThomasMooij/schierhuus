@@ -30,7 +30,7 @@ const FacilitiesCarousel: React.FC<FacilitiesCarouselProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="flex flex-col items-center justify-center w-full mt-20">
       <div className="flex items-center justify-center space-x-4">
         <article className="max-w-md">
           <Slider ref={setSliderRef} {...settings} className="w-auto">

@@ -10,34 +10,20 @@ const itemVariants = {
 
 export default function FacilityText() {
   return (
-    <section className="relative flex flex-col justify-center items-center min-h-[75vh]">
-    <div className="z-10 p-5"> {/* Ensure content is above the background */}
-      <article>
-        <MotionHeader1 variants={itemVariants} className="text-4xl mb-4" title="Onze faciliteiten" />
-        <MotionParagraph variants={itemVariants} className="text-xl mb-8" title="Explore Our Best Services" />
-        <h2>Praktische informatie:</h2>
+    <section className="relative flex flex-col justify-center items-center min-h-[75vh] shadow-full rounded-2xl p-10 border-none	">
+    <div className="z-10 p-5 flex flex-col items-center justify-center">
+      <article className='flex flex-col items-center justify-center'>
+        <MotionHeader1 variants={itemVariants} className="text-white text-4xl font-bold mb-4" title="Onze faciliteiten" />
+        <h2 className="text-white font-bold mb-4">Lees meer over alles wat ons huis te beiden heeft!</h2>
       </article>
 
-      <article>
-        <h2 className="text-white max-w-md">Faciliteiten:</h2>
-        <ul>
-          <li><strong>Hottub:</strong> Ontspan in onze houtgestookte hottub onder de sterrenhemel.</li>
-          <li><strong>Fietsen:</strong> Verken de prachtige omgeving op onze gratis beschikbare fietsen.</li>
-          <li><strong>Tuin:</strong> Geniet van een privé tuin met terras en barbecuefaciliteiten.</li>
-          <li><strong>Speeltoestellen:</strong> Voor de kleintjes zijn er speeltoestellen beschikbaar.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Reglement:</h2>
-        <ol>
-          <li>Gelieve rustige uren te respecteren tussen 22:00 uur en 08:00 uur.</li>
-          <li>Houd het huisje en de omgeving schoon en opgeruimd.</li>
-          <li>Gebruik van de voorzieningen is op eigen risico.</li>
-          <li>Geen onbevoegde gasten toegestaan in het huisje.</li>
-          <li>Meld eventuele schade of problemen direct aan de beheerder.</li>
-        </ol>
-      </article>
+      <div className="z-10 p-5 flex flex-col items-center justify-center">
+          <article className="text-white mb-4">Gelieve rustige uren te respecteren tussen 22:00 uur en 08:00 uur.</article>
+          <article className="text-white mb-4">Houd het huisje en de omgeving schoon en opgeruimd.</article>
+          <article className="text-white mb-4">Gebruik van de voorzieningen is op eigen risico.</article>
+          <article className="text-white mb-4">Geen onbevoegde gasten toegestaan in het huisje.</article>
+          <article className="text-white mb-4">Meld eventuele schade of problemen direct aan de beheerder.</article>
+      </div>
     </div>
   </section>
   )

@@ -15,7 +15,7 @@ const Navbar = () => {
     { tag: "Reviews", url: "/reviews" },
     { tag: "Over ons", url: "/about" },
     { tag: "De omgeving", url: "/area" },
-    { tag: "Praktische info", url: "/info" },
+    { tag: "Praktische info", url: "/facility" },
     { tag: "Contact", url: "/contact" },
   ];
 
