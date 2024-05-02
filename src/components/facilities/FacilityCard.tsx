@@ -35,7 +35,10 @@ const CloseIcon: React.FC<CloseIconProps> = ({ onClick }) => (
 const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
     const { selectedFacility, setSelectedFacility } = useFacilities();
 
+    console.log("selectedFacility:" , selectedFacility)
+
     const handleExpandClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        event.preventDefault();
         event.stopPropagation();
         setSelectedFacility(facility); 
       };

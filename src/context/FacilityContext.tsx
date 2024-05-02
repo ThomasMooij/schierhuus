@@ -22,13 +22,7 @@ const FacilitiesContext = createContext<FacilitiesContextProps>({
   handleCloseClick: () => {},
 });
 
-export const useFacilities = () => useContext(FacilitiesContext) ?? {
-  expandedFacilityId: null,
-  setExpandedFacilityId: () => {},
-  selectedFacility: null,
-  setSelectedFacility: () => {},
-  handleCloseClick: () => {}
-};
+export const useFacilities = () => useContext(FacilitiesContext)
 
 export const FacilitiesProvider: React.FC<FacilitiesProviderProps> = ({ children }) => {
   const [expandedFacilityId, setExpandedFacilityId] = useState<string | null>(null);
