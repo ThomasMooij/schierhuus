@@ -6,6 +6,7 @@ import FacilityText from "./FacilityText";
 import { facilities } from "@/utils/Facilities";
 import { useFacilities } from "@/context/FacilityContext";
 import Slider from "../Slider";
+import MainImages from "@/images/MainImages";
 
 const FacilitiesContent = () => {
     const { selectedFacility } = useFacilities();
@@ -46,7 +47,7 @@ const FacilitiesContent = () => {
             animate="visible"
             transition={{ duration: 0.8 }}
           >
-            <Slider images={selectedFacility.images} height="100vh" />
+            <Slider images={MainImages} height="100vh" />
           </MotionDiv>
 
           <MotionDiv

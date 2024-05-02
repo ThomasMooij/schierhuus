@@ -10,7 +10,7 @@ interface ImageProps {
 const ImageComponent: React.FC<ImageProps> = ({ src, alt, isActive }) => {
   return (
     <div className={`absolute inset-0 transition-opacity duration-1000 ease-in-out rounded-xl ${isActive ? 'opacity-100' : 'opacity-0'}`}>
-      <Image src={src} alt={alt} layout='fill' objectFit="cover" className='rounded-2xl shadow-2xl	'/>
+      <Image src={src} alt={alt} fill objectFit="cover" className='rounded-2xl shadow-2xl	'/>
     </div>
   );
 };
