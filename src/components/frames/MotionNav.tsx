@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 export const MotionNav : React.FC<MotionInterface> = ({initial, animate, transition, className , variants,  children, onClick}) => {
   return (
     <motion.nav
+        layout
         initial={initial}
         animate={ animate }
         transition={ transition}
