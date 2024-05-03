@@ -8,9 +8,10 @@ import { StaticImageData } from 'next/image';
 interface SliderProps {
   images: StaticImageData[]; 
   height?: string; 
+  width?: string;
 }
 
-const Slider: React.FC<SliderProps> = ({ images, height }) => {
+const Slider: React.FC<SliderProps> = ({ images, height, width }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [openReserves, setOpenReserves] = useState(false);
 
@@ -28,7 +29,7 @@ const Slider: React.FC<SliderProps> = ({ images, height }) => {
   }, [images]);
 
   return (
-    <section className="relative" style={{ height }}>
+    <section className="relative" style={{ height, width }}>
       {images.map((image, index) => (
         <ImageComponent key={index} src={image} alt={`Image ${index}`} isActive={index === currentSlide} />
       ))}

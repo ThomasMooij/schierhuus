@@ -3,9 +3,9 @@ import { MotionInterface } from "./MotionInterface"
 import { motion } from 'framer-motion';
 
 
-export const MotionDiv : React.FC<MotionInterface> = ({initial, animate, transition, className , variants,  children, exit,  onClick}) => {
+export const MotionNav : React.FC<MotionInterface> = ({initial, animate, transition, className , variants,  children, onClick}) => {
   return (
-    <motion.div
+    <motion.nav
         initial={initial}
         animate={ animate }
         transition={ transition}
@@ -14,6 +14,6 @@ export const MotionDiv : React.FC<MotionInterface> = ({initial, animate, transit
         onClick={onClick}
           >
           {children}
-    </motion.div>
+    </motion.nav>
   )
 }

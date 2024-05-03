@@ -8,6 +8,7 @@ export interface MotionInterface {
     title?: string;
     variants?: Variants;
     children?: React.ReactNode;
+    exit?: Object; 
     onClick?: (event: React.MouseEvent<HTMLDivElement>) => void; 
 
 }

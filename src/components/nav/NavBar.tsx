@@ -4,6 +4,9 @@ import { usePathname } from "next/navigation";
 import NavLogo from "./NavLogo";
 import NavItem from "./NavItem";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { MotionNav } from "../frames/MotionNav";
+import { MotionUl } from "../frames/MotionUl";
+import { NavUlVariants } from "@/utils/Variants";
 
 const Navbar = () => {
   const [openHam, setOpenHam] = useState(false);
@@ -20,7 +23,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
+    <MotionNav
+      initial={false}
+      animate={openHam ? "open" : "closed "}
       className=
       "text-black fixed top-0 w-full z-10 transition-colors duration-300 ease-in-out "
     >
@@ -30,26 +35,30 @@ const Navbar = () => {
           <NavLogo />
         </div>
         {/* Items Section - shown only on large screens */}
-        <div className="hidden lg:flex items-center space-x-8 mt-2">
+
+        <MotionUl variants={NavUlVariants} className="hidden lg:flex items-center space-x-8 mt-2">
           {NavItems.map(({ tag, url }) => (
             <NavItem key={url} url={url} tag={tag} path={pathname} />
           ))}
-        </div>
+        </MotionUl >
+
         {/* Hamburger Menu - shown only on small screens */}
+
         <div className="lg:hidden">
           <button onClick={() => setOpenHam(!openHam)} className="cursor-pointer opacity-75">
-            {openHam ? <FaTimes className="text-3xl" /> : <FaBars className="text-2xl" />}
+            {openHam ? <FaTimes className="text-3xl text-white " /> : <FaBars className="text-2xl text-white" />}
           </button>
           {openHam && (
-            <div className="flex flex-col absolute top-full right-0 mt-2 py-2 shadow-md bg-white">
+            <MotionUl variants={NavUlVariants} className="flex flex-col absolute top-full right-0 mt-2 py-2 shadow-md">
               {NavItems.map(({ tag, url }) => (
                 <NavItem key={url} url={url} tag={tag} path={pathname} />
               ))}
-            </div>
+            </MotionUl>
+
           )}
         </div>
       </div>
-    </nav>
+    </MotionNav>
   );
 };
 
