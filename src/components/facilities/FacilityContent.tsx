@@ -19,7 +19,7 @@ const FacilitiesContent = () => {
 
     return !selectedFacility ? (
         <AnimatePresence>
-            <section className="flex md:flex-row items-center justify-center min-h-[75vh] p-5">
+            <section className="flex md:flex-row items-center justify-center min-h-[70vh] p-5">
                 <MotionDiv
                     variants={FacilityTextVariants}
                     initial="hidden"

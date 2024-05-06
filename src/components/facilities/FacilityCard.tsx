@@ -43,13 +43,6 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
         setSelectedFacility(facility); 
       };
       
-    
-    // const handleCloseClick = (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
-    //     event.preventDefault();
-    //     event.stopPropagation(); 
-    //     selectedFacility(null);
-    // };
-
     return (
 
         <MotionDiv

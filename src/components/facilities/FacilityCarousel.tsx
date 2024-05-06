@@ -22,7 +22,7 @@ const FacilitiesCarousel: React.FC<FacilitiesCarouselProps> = ({
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
@@ -30,7 +30,7 @@ const FacilitiesCarousel: React.FC<FacilitiesCarouselProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full mt-20">
+    <div className="flex flex-col items-center justify-center w-full mt-4">
       <div className="flex items-center justify-center space-x-4">
         <article className="max-w-md">
           <Slider ref={setSliderRef} {...settings} className="w-auto">
