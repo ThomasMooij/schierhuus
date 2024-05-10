@@ -4,9 +4,6 @@ import { usePathname } from "next/navigation";
 import NavLogo from "./NavLogo";
 import NavItem from "./NavItem";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { MotionNav } from "../frames/MotionNav";
-import { MotionUl } from "../frames/MotionUl";
-import { NavHamUlVariants, NavUlVariants } from "@/utils/Variants";
 
 const Navbar = () => {
   const [openHam, setOpenHam] = useState(false);
@@ -23,9 +20,7 @@ const Navbar = () => {
   ];
 
   return (
-    <MotionNav
-      initial={false}
-      animate={openHam ? "open" : "closed "}
+    <nav
       className=
       "text-black fixed top-0 w-full z-10 transition-colors duration-300 ease-in-out container mx-auto flex items-center justify-between px-4 "
     >
@@ -34,25 +29,25 @@ const Navbar = () => {
           <NavLogo />
         </div>
         {/* Items Section - shown only on large screens */}
-        <MotionUl variants={NavUlVariants} className="hidden lg:flex items-center space-x-8 mt-2">
+        <ul className="hidden lg:flex items-center space-x-8 mt-2">
           {NavItems.map(({ tag, url }) => (
             <NavItem key={url} url={url} tag={tag} path={pathname} />
           ))}
-        </MotionUl >
+        </ul >
         {/* Hamburger Menu - shown only on small screens */}
         <div className="lg:hidden">
           <button onClick={() => setOpenHam(!openHam)} className="cursor-pointer opacity-75">
             {openHam ? <FaTimes className="text-3xl text-white " /> : <FaBars className="text-2xl text-white" />}
           </button>
           {openHam && (
-            <MotionUl variants={NavHamUlVariants} className="flex flex-col absolute top-full right-0 mt-2 py-2 shadow-md">
+            <ul className="flex flex-col absolute top-full right-0 mt-2 py-2 shadow-md">
               {NavItems.map(({ tag, url }) => (
                 <NavItem key={url} url={url} tag={tag} path={pathname} />
               ))}
-            </MotionUl>
+            </ul>
           )}
         </div>
-    </MotionNav>
+    </nav>
   );
 };
 

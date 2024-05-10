@@ -8,6 +8,12 @@ export const metadata: Metadata = {
 
 export default function Area() {
   return (
-    <div>Area</div>
+    <section className="flex flex-wrap w-full h-[70vh]" >
+      
+      <nav>
+        
+      </nav>
+
+    </section>
   )
 }
