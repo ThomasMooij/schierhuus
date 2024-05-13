@@ -14,6 +14,7 @@ interface SliderProps {
 const Slider: React.FC<SliderProps> = ({ images, height, width }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [openReserves, setOpenReserves] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
   const nextSlide = () => setCurrentSlide(prev => (prev === images.length - 1 ? 0 : prev + 1));
   const prevSlide = () => setCurrentSlide(prev => (prev === 0 ? images.length - 1 : prev - 1));
@@ -23,13 +24,22 @@ const Slider: React.FC<SliderProps> = ({ images, height, width }) => {
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 2500); 
+    const slideInterval = setInterval(() => {
+      if (!isHovering) {
+        nextSlide();
+      }
+    }, 1500);
 
     return () => clearInterval(slideInterval);
-  }, [images]);
+  }, [isHovering, images]);
 
   return (
-    <section className="relative" style={{ height, width }}>
+    <section
+      className="relative"
+      style={{ height, width }}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
       {images.map((image, index) => (
         <ImageComponent key={index} src={image} alt={`Image ${index}`} isActive={index === currentSlide} />
       ))}
