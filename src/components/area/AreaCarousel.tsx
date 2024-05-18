@@ -5,16 +5,18 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import FacilityCard from "./FacilityCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Facility } from "@/utils/Facilities";
+import { Area } from "@/utils/Area";
+import { useArea } from "@/context/FacilityContext";
 
-interface FacilitiesCarouselProps {
-  facilities: Facility[];
+interface AreaCarouselProps {
+  Areas: Area[];
 }
-const FacilitiesCarousel: React.FC<FacilitiesCarouselProps> = ({
-  facilities,
+const AreaCarousel: React.FC<AreaCarouselProps> = ({
+  Areas,
 }) => {
   const [sliderRef, setSliderRef] = useState<any>(null);
 
+  const { expandedFacilityId } = useArea();
 
   const settings = {
     dots: false,
@@ -32,7 +34,7 @@ const FacilitiesCarousel: React.FC<FacilitiesCarouselProps> = ({
       <div className="flex items-center justify-center space-x-4">
         <article className="max-w-md">
           <Slider ref={setSliderRef} {...settings} className="w-auto">
-            {facilities.map((facility, index) => (
+            {Area.map((facility, index) => (
               <div key={facility.id}>
                 <FacilityCard facility={facility} index={index} />
               </div>
@@ -52,4 +54,4 @@ const FacilitiesCarousel: React.FC<FacilitiesCarouselProps> = ({
   );
 };
 
-export default FacilitiesCarousel;
+export default AreaCarousel;

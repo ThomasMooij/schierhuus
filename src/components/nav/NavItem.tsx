@@ -14,7 +14,7 @@ const NavItem: React.FC<NavItems> = ({ url, tag, path }) => {
       href={url}
       className={`font-bold px-3 text-white bg-mosgroen rounded-full mb-4 hover:bg-Terracota ${
         path === url
-          ? "underline underline-offset-4"
+          ? "underline underline-offset-4 bg-Terracota"
           : "transition duration-300 ease-in-out"
       } `}
     >

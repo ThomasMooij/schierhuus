@@ -6,9 +6,9 @@ import FacilitiesContent from "@/components/facilities/FacilityContent";
 const FacilitiesPage = () => {
   return (
     <FacilitiesProvider>
-      <main className="max-h-[70vh]">
+      <section className="max-h-[70vh]">
         <FacilitiesContent />
-      </main>
+      </section>
     </FacilitiesProvider>
   );
 };
