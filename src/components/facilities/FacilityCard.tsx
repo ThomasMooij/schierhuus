@@ -1,21 +1,9 @@
 "use client"
-import React, { useState } from 'react';
 import { useFacilities } from '@/context/FacilityContext';
 import { MotionDiv } from '../frames/MotionDiv';
-import { MotionParagraph } from '../frames/MotionParagraph';
-import Slider from '../Slider';
-import MainImages from '@/images/MainImages';
 import { FacilityCardVariants } from '@/utils/Variants';
-import { slice } from '@/utils/Functions';
 import Image, { StaticImageData } from 'next/image';
-import ImageComponent from '../ImageComponent';
-
-interface Facility {
-    id: string;
-    title: string;
-    description: string;
-    images:StaticImageData[]
-}
+import { Facility } from '@/utils/Facilities';
 
 interface FacilityCardProps {
     facility: Facility;
@@ -34,8 +22,6 @@ const CloseIcon: React.FC<CloseIconProps> = ({ onClick }) => (
 
 const FacilityCard: React.FC<FacilityCardProps> = ({ facility, index }) => {
     const { selectedFacility, setSelectedFacility } = useFacilities();
-
-    console.log("selectedFacility:" , selectedFacility)
 
     const handleExpandClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         event.preventDefault();

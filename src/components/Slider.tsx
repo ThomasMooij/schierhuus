@@ -28,7 +28,7 @@ const Slider: React.FC<SliderProps> = ({ images, height, width }) => {
       if (!isHovering) {
         nextSlide();
       }
-    }, 1500);
+    }, 2500);
 
     return () => clearInterval(slideInterval);
   }, [isHovering, images]);

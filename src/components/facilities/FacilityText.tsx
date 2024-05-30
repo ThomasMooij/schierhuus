@@ -1,7 +1,4 @@
 import { MotionHeader1 } from '@/components/frames/MotionHeader1';
-import { MotionParagraph } from '@/components/frames/MotionParagraph';
-import backgroundImage from '@/images/MainImages/foto1.jpg'
-import ImageComponent from '../ImageComponent';
 
 const itemVariants = {
     hidden: { x: -50, opacity: 0 },

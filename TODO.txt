@@ -1,3 +1,5 @@
+## Auto email contact page. 
+
 ## Integrate google reviews. 
 
 ## improve SEO:
@@ -5,5 +7,21 @@
 
 ## Images through aws/public folder?
 
+## Huurkalender calendar impementation
 
-## fade transition between images and other components. 
+## google maps on contact page
+
+## language switcher. 
+
+## omgeving nav under regular navitem 
+
+KWESTIES: 
+
+AreaText component statisch of naar hand van SelectedNavItem? 
+wat moet er in de footer staan ?
+
+toegang tot emails van klanten die geserveerd hebben.
+
+AWS account.
+
+google cloud console. 

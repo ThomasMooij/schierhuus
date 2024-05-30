@@ -14,19 +14,30 @@ interface GoogleApiResponse {
 }
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 };
 
 export async function GET(req: NextRequest) {
-  const apiKey = process.env.API_ID;
-  const placeId = process.env.PLACE_ID; 
+  const apiKey = process.env.NEXT_PUBLIC_API_ID;
+  const placeId = process.env.NEXT_PUBLIC_PLACE_ID;
+
+  if (!apiKey || !placeId) {
+    console.error('API key or Place ID is missing');
+    return new NextResponse(JSON.stringify({ error: 'Missing API key or Place ID' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 
   try {
-    
     const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&fields=reviews&key=${apiKey}`, {
       method: 'GET',
     });
     if (!response.ok) {
+      const errorText = await response.text();
+      console.error(`Failed to fetch Google reviews: ${errorText}`);
       throw new Error('Failed to fetch Google reviews');
     }
     const data: GoogleApiResponse = await response.json();
@@ -38,7 +49,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching reviews:', error);
     return new NextResponse(JSON.stringify({ error: 'Failed to fetch reviews' }), {
       status: 500,
       headers: {

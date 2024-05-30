@@ -2,21 +2,20 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
-import FacilityCard from "./FacilityCard";
+import AreaCard from "./AreaCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Area } from "@/utils/Area";
-import { useArea } from "@/context/FacilityContext";
+import { Area, navItems } from "@/utils/Area";
+import { useAreas } from "@/context/AreaContext";
 
 interface AreaCarouselProps {
-  Areas: Area[];
+  areas: Area[];
 }
 const AreaCarousel: React.FC<AreaCarouselProps> = ({
-  Areas,
+  areas,
 }) => {
   const [sliderRef, setSliderRef] = useState<any>(null);
-
-  const { expandedFacilityId } = useArea();
+  const {selectedNavItem} = useAreas();
 
   const settings = {
     dots: false,
@@ -34,10 +33,15 @@ const AreaCarousel: React.FC<AreaCarouselProps> = ({
       <div className="flex items-center justify-center space-x-4">
         <article className="max-w-md">
           <Slider ref={setSliderRef} {...settings} className="w-auto">
-            {Area.map((facility, index) => (
-              <div key={facility.id}>
-                <FacilityCard facility={facility} index={index} />
+            {areas.map((area, index) => (
+              area.navId === selectedNavItem ? (
+                <div key={area.id}>
+                <AreaCard area={area} index={index} />
               </div>
+              ) : (
+             null
+              )
+
             ))}
           </Slider>
         </article>

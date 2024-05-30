@@ -12,7 +12,7 @@ export default function About() {
   const ReserveComponent = dynamic(() => import('@/components/Reserve'));
 
   return (
-    <section className="flex flex-wrap w-full h-[70vh]">
+    <section className="flex flex-wrap w-full h-[90vh]">
       <MotionDiv
         variants={aboutVariants}
         initial="hidden"

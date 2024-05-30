@@ -64,7 +64,6 @@ const FacilitiesContent = () => {
                     <button className="cursor-pointer opacity-75 mr-28" onClick={() => setSelectedFacility(null)}>
                         <FaTimes
                             className="text-3xl text-white "
-
                         />
                     </button>
                 </div>
