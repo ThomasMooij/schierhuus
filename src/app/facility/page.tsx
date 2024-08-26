@@ -6,7 +6,7 @@ import FacilitiesContent from "@/components/facilities/FacilityContent";
 const FacilitiesPage = () => {
   return (
     <FacilitiesProvider>
-      <section className="max-h-[70vh]">
+      <section className="h-[100vh]">
         <FacilitiesContent />
       </section>
     </FacilitiesProvider>

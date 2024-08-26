@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { MotionDiv } from "@/components/frames/MotionDiv";
 import { aboutVariants, sliderVariants } from "@/utils/Variants";
 import MainImages from "@/images/MainImages";
+import { ScrollToReservation } from "@/utils/Functions";
 
 export default function Home() {
   return (
@@ -25,9 +26,14 @@ export default function Home() {
             animate="visible"
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Suspense fallback={<LoadingSkeleton />}>
+            <Suspense fallback={<LoadingSkeleton />} >
+            <div id='reservation'>
               <Reserve />
+            </div>
             </Suspense>
+
+            <ScrollToReservation />
+
           </MotionDiv>
         </main>
     </>

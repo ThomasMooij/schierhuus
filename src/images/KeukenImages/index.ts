@@ -1,7 +1,7 @@
-import { StaticImageData } from 'next/image';
-import image1 from './keuken1.jpg';
-import image2 from './keuken2.jpg';
 
-const KeukenImages: StaticImageData[]
-= [image1, image2];
-export default KeukenImages;
+const KeukenImages: string[] = [
+    "https://storage.googleapis.com/schierhuus_bucket/keuken/keuken1.jpg",
+    "https://storage.googleapis.com/schierhuus_bucket/keuken/keuken2.jpg",
+  ];
+  
+  export default KeukenImages;

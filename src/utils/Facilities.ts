@@ -18,28 +18,11 @@ export interface Facility {
       images: KeukenImages
     },
     {
-      id: 'fietsen',
-      title: 'Fietsen',
-      description: 'Maak gebruik van onze fietsverhuur om het eiland te verkennen. Beschikbare fietsen voor alle leeftijden.',
-      images: FietsenImages
-    },
-    {
       id: 'hottub',
       title: 'Hottub',
       description: 'Ontspan in onze luxe hottub met uitzicht op de prachtige natuur. Perfect voor een ontspannen avond.',
       images: HottubImages
     },
-    {
-      id: 'hottub',
-      title: 'Hottub',
-      description: 'Ontspan in onze luxe hottub met uitzicht op de prachtige natuur. Perfect voor een ontspannen avond.',
-      images: HottubImages
-    },
-    {
-      id: 'fietsen',
-      title: 'Fietsen',
-      description: 'Maak gebruik van onze fietsverhuur om het eiland te verkennen. Beschikbare fietsen voor alle leeftijden.',
-      images: FietsenImages
-    },
+
   ];
   

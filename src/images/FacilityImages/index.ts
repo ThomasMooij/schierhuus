@@ -1,7 +1,7 @@
-import { StaticImageData } from 'next/image';
-import image1 from './serre.avif';
-import image2 from './serre2.avif';
+const FacilityImages: string[] = [
+    "https://storage.googleapis.com/schierhuus_bucket/facility/serre.avif",
+    "https://storage.googleapis.com/schierhuus_bucket/facility/serre.avif",
+  ];
 
-const FacilityImages: StaticImageData[]
-= [image1, image2];
+
 export default FacilityImages;

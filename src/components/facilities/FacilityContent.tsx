@@ -50,7 +50,7 @@ const FacilitiesContent = () => {
                 animate="visible"
                 transition={{ duration: 0.8 }}
             >
-                <Slider images={selectedFacility.images} width='50vw' height="80vh" />
+                <Slider images={selectedFacility.images} width='50vw' height="100vh" />
             </MotionDiv>
 
             <MotionDiv

@@ -1,23 +1,27 @@
-"use client"
-import { usePathname } from 'next/navigation'
-import React, { useState } from 'react';
+"use client";
+
+import { usePathname, useRouter } from 'next/navigation';
+import React from 'react';
 
 interface ReservationBtnProps {
   openReserveComponent: () => void;
 }
 
-const ReservationBtn : React.FC<ReservationBtnProps> = ({openReserveComponent}) => {
+const ReservationBtn: React.FC<ReservationBtnProps> = ({ openReserveComponent }) => {
+  const pathname = usePathname();
+  const router = useRouter();
 
-  const pathname = usePathname()
+  const handleClick = () => {
+    if (pathname === '/') {
+      // Scroll to the reservation section on the same page
+      const reservePage = document.getElementById('reservation');
+      reservePage?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Redirect to home page with query parameter or hash
+      router.push('/#reservation');
+    }
+  };
 
-const handleClick = () => {
-  if (pathname ==='/'){
-    const reservePage = document.getElementById('reservation');
-    reservePage?.scrollIntoView({ behavior: 'smooth' });
-  } else {
-    openReserveComponent()
-  }
-};
   return (
     <button
       id="ReservationBtn"
