@@ -6,7 +6,7 @@ export interface Area {
   navId: number;
   title: string;
   description: string;
-  images: StaticImageData[];
+  images: string[];
 }
 
 export const navItems = [

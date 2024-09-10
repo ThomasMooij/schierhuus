@@ -6,7 +6,7 @@ import ReservationBtn from './buttons/ReservationBtn';
 import { StaticImageData } from 'next/image';
 
 interface SliderProps {
-  images: StaticImageData[]; 
+  images: string[]; 
   height?: string; 
   width?: string;
 }

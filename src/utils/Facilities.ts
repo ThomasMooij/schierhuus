@@ -7,7 +7,7 @@ export interface Facility {
     id: string;
     title: string;
     description: string;
-    images:StaticImageData[]
+    images: string[];
   }
   
   export const facilities: Facility[] = [
