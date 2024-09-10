@@ -13,9 +13,8 @@ interface GoogleApiResponse {
   };
 }
 
-export const config = {
-  runtime: 'edge',
-};
+export const runtime = "edge";
+
 
 export async function GET(req: NextRequest) {
   const apiKey = process.env.NEXT_PUBLIC_API_ID;
