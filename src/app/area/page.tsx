@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Area() {
   return (
     <AreasProvider>
-      <section className="flex flex-col w-full h-[100vh]">
+      <section className="flex flex-col w-full h-[80vh] justify-center ">
         <MotionDiv
           variants={aboutVariants}
           initial="hidden"

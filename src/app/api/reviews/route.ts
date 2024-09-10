@@ -42,6 +42,8 @@ export async function GET(req: NextRequest) {
     }
     const data: GoogleApiResponse = await response.json();
 
+    console.log(data)
+
     return new NextResponse(JSON.stringify(data.result.reviews), {
       status: 200,
       headers: {

@@ -11,12 +11,10 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const NavItems = [
-    { tag: "Home", url: "/" },
-    { tag: "Reviews", url: "/reviews" },
+    { tag: "Reserveer", url: "/" },
     { tag: "Over ons", url: "/about" },
     { tag: "De omgeving", url: "/area" },
     { tag: "Praktische info", url: "/facility" },
-    { tag: "Contact", url: "/contact" },
   ];
 
   return (

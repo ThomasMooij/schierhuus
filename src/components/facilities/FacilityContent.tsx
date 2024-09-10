@@ -43,14 +43,13 @@ const FacilitiesContent = () => {
         </AnimatePresence>
     ) : (
         <section className="flex flex-row text-white ">
-
             <MotionDiv
                 variants={aboutVariants}
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 0.8 }}
             >
-                <Slider images={selectedFacility.images} width='50vw' height="100vh" />
+                <Slider images={selectedFacility.images} width='50vw' height="90vh" />
             </MotionDiv>
 
             <MotionDiv

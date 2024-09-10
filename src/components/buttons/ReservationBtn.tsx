@@ -13,11 +13,9 @@ const ReservationBtn: React.FC<ReservationBtnProps> = ({ openReserveComponent })
 
   const handleClick = () => {
     if (pathname === '/') {
-      // Scroll to the reservation section on the same page
       const reservePage = document.getElementById('reservation');
       reservePage?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Redirect to home page with query parameter or hash
       router.push('/#reservation');
     }
   };
@@ -28,7 +26,7 @@ const ReservationBtn: React.FC<ReservationBtnProps> = ({ openReserveComponent })
       onClick={handleClick}
       className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-[#E2725B] text-white font-bold py-2 px-4 rounded-full hover:bg-[#C14431] transition duration-300 ease-in-out"
     >
-      Make a Reservation
+      Reserveer uw verblijf
     </button>
   );
 };

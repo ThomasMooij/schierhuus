@@ -5,7 +5,7 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import AreaCard from "./AreaCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Area, navItems } from "@/utils/Area";
+import { Area } from "@/utils/Area";
 import { useAreas } from "@/context/AreaContext";
 
 interface AreaCarouselProps {

@@ -1,15 +1,19 @@
 import { Suspense } from 'react';
 import Slider from '@/components/Slider';
 import LoadingSkeleton from '@/components/LoadingSkeleton';
-import dynamic from 'next/dynamic';
 import AboutComponent from '@/components/about/AboutComponent';
 import { MotionDiv } from '@/components/frames/MotionDiv';
 import { aboutVariants, sliderVariants } from '@/utils/Variants';
 import MainImages from '@/images/MainImages';
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: "Over Ons",
+  description: "about page",
+};
 
 export default function About() {
-
-  const ReserveComponent = dynamic(() => import('@/components/Reserve'));
 
   return (
     <section className="flex flex-wrap w-full h-[100vh]">

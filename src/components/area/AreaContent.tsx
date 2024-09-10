@@ -50,7 +50,7 @@ const AreaContent = () => {
         transition={{ duration: 0.8 }}
         className="w-1/2"
       >
-        <Slider images={selectedArea.images} width='50vw' height="100vh" />
+        <Slider images={selectedArea.images} width='50vw' height="90vh" />
       </MotionDiv>
 
       <MotionDiv

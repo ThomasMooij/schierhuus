@@ -6,8 +6,6 @@ export const AreaNav = () => {
   const { selectedNavItem, setSelectedNavItem } = useAreas();
   const { selectedArea } = useAreas()
 
-  console.log(selectedArea)
-
   if (selectedArea === null) {
     return (
       <nav className="mt-20">
