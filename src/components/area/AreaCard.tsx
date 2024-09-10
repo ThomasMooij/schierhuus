@@ -41,7 +41,7 @@ const AreaCard: React.FC<AreaCardProps> = ({ area, index }) => {
     >
         <div className="relative w-1/2 h-full">
             
-            <Image src={area.images[0].src} alt="" layout='fill' objectFit="cover"  />
+            <Image src={area.images[0]} alt="" layout='fill' objectFit="cover"  />
         </div>
         <div className="w-1/2 h-full flex flex-col p-4 justify-center">
             <h2 className="text-xl font-semibold">{area.title}</h2>
