@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 
 interface ImageProps {
-  src: StaticImageData[];
+  src: string[];
   alt: string;
   isActive: boolean;
 }
